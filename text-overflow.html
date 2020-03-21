@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    p {
+      width: 200px;
+      border: 1px solid;
+      padding: 2px 5px;
+
+      /* BOTH of the following are required for text-overflow */
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .overflow-visible {
+      white-space: initial;
+    }
+
+    .overflow-clip {
+      text-overflow: clip;
+    }
+
+    .overflow-ellipsis {
+      white-space: initial;
+      text-overflow: ellipsis;
+      width: 100px;
+      height: 100px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      /*第三行显示 ...*/
+      -webkit-box-orient: vertical;
+    }
+
+    .overflow-string {
+      /* Not supported in most browsers, 
+     see the 'Browser compatibility' section below */
+      text-overflow: "..";
+    }
+
+    .c {
+      height: 40vh;
+      background-color: chartreuse;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .c1 {
+      background-color: red;
+      width: 50vw;
+      height: 100px;
+      align-items: center;
+    }
+
+    .c2 {
+      background-color: aqua;
+      flex-grow: 1;
+    }
+
+    .c3 {
+      background-color: blanchedalmond;
+      height: 100px;
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="overflow-visible">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+  <div class="c">
+    <div class="c1" id="drag">1、拖拽到此上传</div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+  </div>
+  <input type="text" id="myInput" />
+  <script>
+    
+  </script>
+</body>
+
+</html>
