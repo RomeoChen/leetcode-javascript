@@ -57,7 +57,7 @@
     }
 
     .c2 {
-      background-color: aqua;
+      /* background-color: aqua; */
       flex-grow: 1;
     }
 
@@ -67,6 +67,9 @@
       visibility: hidden;
     }
   </style>
+  <script async src="./proxy.js"></script>
+  <script src="./test.js"></script>
+  <script src="./leetcode/tree.js"></script>
 </head>
 
 <body>
@@ -83,7 +86,20 @@
     <div class="c2">2</div>
     <div class="c3">3</div>
   </div>
-  <input type="text" id="myInput" />
+  <input type="text" id="myInput" autocomplete="on"/>
+  <div class="animation"></div>
+  <style>
+    @keyframes changeColor {
+        0%   {background: red; left:0px; top:0px;}
+        25%  {background: yellow; left:200px; top:0px;}
+        50%  {background: blue; left:200px; top:200px;}
+        75%  {background: green; left:0px; top:200px;}
+        100% {background: red; left:0px; top:0px;}
+    }
+    .c2 {
+      animation: changeColor 5s infinite;
+    }
+  </style>
   <script>
     
   </script>
