@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}\\matrix.js"
+      "program": "${workspaceFolder}/leetcode/number-to-rome.js"
     }
   ]
 }

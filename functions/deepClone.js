@@ -1,4 +1,5 @@
 function deepClone(obj) {
+  if (!obj || typeof obj !== 'object') return obj;
   let newObj = {};
   for (let key in obj) {
     if (typeof obj[key] === 'object') {
